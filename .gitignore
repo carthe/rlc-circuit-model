@@ -1,0 +1,9 @@
+/.idea
+
+phpunit.xml
+.phpunit.result.cache
+
+/build/*
+!build/.gitkeep
+
+/vendor/

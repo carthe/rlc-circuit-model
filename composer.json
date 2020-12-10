@@ -1,0 +1,21 @@
+{
+    "name": "tme/recruitment",
+    "description": "Recruitment task for PHP developers.",
+    "type": "project",
+    "minimum-stability": "stable",
+    "license": "MIT",
+    "require": {
+        "phpunit/phpunit": "~9",
+        "php": ">=7.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Recruitment\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Recruitment\\Tests\\": "tests/"
+        }
+    }
+}
