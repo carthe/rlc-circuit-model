@@ -10,7 +10,7 @@ class AbstractElement {
     const TYPE_INDUCTION = 'induction';
     const TYPE_RESISTANCE = 'resistance';
 
-    function __construct($v) {
+    public function __construct($v) {
         if ($v < 0)
             throw new \InvalidArgumentException();
         else{
