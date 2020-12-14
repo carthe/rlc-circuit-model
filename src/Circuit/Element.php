@@ -61,16 +61,6 @@ class Element{
                     return $calculator->reciprocal(...$values);
                 break;
         }
-
-        
-        //figure out how to cast object paramater as fuction arguments
-
-        //return $calculator->strait(...
-        //return $calculator->strait($this->items[0]->getValue());
-
-        //also calculation needs to check $elementType
-
-        //temporary workaround
     }
 }
 
