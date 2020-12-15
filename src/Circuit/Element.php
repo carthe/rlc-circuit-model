@@ -33,7 +33,7 @@ class Element{
     {
         if($item->getType() != $this->elementType)
                 throw new UnsupportedElementException(); 
-
+        
         array_push($this->items, $item);
         return $this;
     }
@@ -42,6 +42,7 @@ class Element{
         $calculator = new Calculator;
 
         $values = array();
+
         foreach ($this->items as $item) {
             array_push($values, $item->getValue());
         }
@@ -61,6 +62,14 @@ class Element{
                     return $calculator->reciprocal(...$values);
                 break;
         }
+    }
+
+    /**
+     * Get the value of elementType
+     */ 
+    public function getElementType()
+    {
+        return $this->elementType;
     }
 }
 
