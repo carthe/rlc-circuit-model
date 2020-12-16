@@ -4,6 +4,8 @@ namespace Recruitment\Circuit;
 
 use Recruitment\Circuit\Element;
 use Recruitment\Element\AbstractElement;
+use Recruitment\Element\Capacitor;
+
 
 class RLC{
     private $resistance = 0;
@@ -16,7 +18,6 @@ class RLC{
     {
         array_push($this->elements, $element);
 
-        /*REWRITE THIS PART
         switch ($element->getElementType()) {
             case AbstractElement::TYPE_RESISTANCE:
                 $this->setResistance($this->getResistance() + $element->calculate());
@@ -25,14 +26,20 @@ class RLC{
                 $this->setInduction($this->getInduction() + $element->calculate());
                 break;
             case AbstractElement::TYPE_CAPACITY:
-                $this->setCapacity($this->getCapacity() + $element->calculate());
+                
+                //something to think about...
+                if($this->getCapacity() == 0)
+                    $value = $this->getCapacity();
+                else
+                    $value = pow($this->getCapacity(),-1);
+
+                $value = $value+pow($element->calculate(),-1);
+                
+                $this->setCapacity(pow($value, -1));
                 break;
             default:
                 break;
         }
-
-        I could try to calculate serial RLC connection in getters
-        */
 
 
         return $this;
