@@ -16,6 +16,7 @@ class RLC{
     {
         array_push($this->elements, $element);
 
+        /*REWRITE THIS PART
         switch ($element->getElementType()) {
             case AbstractElement::TYPE_RESISTANCE:
                 $this->setResistance($this->getResistance() + $element->calculate());
@@ -29,6 +30,9 @@ class RLC{
             default:
                 break;
         }
+
+        I could try to calculate serial RLC connection in getters
+        */
 
 
         return $this;
