@@ -27,7 +27,7 @@ class RLC{
                 break;
             case AbstractElement::TYPE_CAPACITY:
                 
-                //something to think about...
+                //getting math done...
                 if($this->getCapacity() == 0)
                     $value = $this->getCapacity();
                 else
